@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: horizon-nginx
+    build: ./nginx
+    ports:
+      - 3000:3000
+    links:
+      - horizon:horizon
+    depends_on:
+      - horizon
+    restart: unless-stopped
+
+  horizon:
+    container_name: horizon-app
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      - ENVIRONMENT=docker
+    links:
+      - mongo:mongo
+    depends_on:
+      - mongo
+    restart: unless-stopped
+
+  mongo:
+    image: mongo
+    container_name: horizon-mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: horizonadmin
+      MONGO_INITDB_ROOT_PASSWORD: makeitpopwe123HORIZON
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodata:/data/db
+    restart: unless-stopped
+
+volumes:
+  mongodata:

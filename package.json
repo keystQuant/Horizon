@@ -1,0 +1,63 @@
+{
+  "name": "horizon",
+  "version": "1.0.0",
+  "description": "앱의 상태를 한 눈에 모두 확인하기 대시보드",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "webpack",
+    "devserver": "webpack-dev-server --content-base static/dist --hot",
+    "lint:tests": "eslint ./tests --ext .js --fix",
+    "lint:src": "eslint ./src --ext .js --fix",
+    "test": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha tests/*.js",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "open coverage/lcov-report/index.html",
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "serve": "nodemon ./server.js --exec babel-node --presets env,stage-0",
+    "start": "node ./server.js"
+  },
+  "author": "peepee",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "chai-immutable": "^1.6.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "express": "^4.16.3",
+    "html-webpack-plugin": "^3.2.0",
+    "immutable": "^3.8.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "mongoose": "^5.2.4",
+    "nmp": "^1.0.3",
+    "nodemon": "^1.18.3",
+    "socket.io-client": "^2.1.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "devDependencies": {
+    "yarn": "^1.7.0"
+  }
+}
