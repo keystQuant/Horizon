@@ -38,6 +38,7 @@
     "chai-http": "^4.0.0",
     "chai-immutable": "^1.6.0",
     "css-loader": "^1.0.0",
+    "ejs": "^2.6.1",
     "eslint": "^5.1.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-airbnb-base": "^13.0.0",

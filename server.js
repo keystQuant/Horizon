@@ -13,6 +13,12 @@ const Test = require('./src/models/test');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static('assets')); // CSS 파일 연결
+
+app.set('views', `${__dirname}/templates`); // HTML 파일 연결
+app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
+
 
 const server = app.listen(8080, () => {
   console.log('포트 8080에 서버 시작합니다.');
@@ -60,4 +66,16 @@ app.post('/api/test', (req, res) => {
 
     res.json({ result: 1 });
   });
+});
+
+
+// //////////////////////// //
+// // URL 정의는 여기서 부터 // //
+// /////////////////////// //
+
+// 여기부터는 프론트엔드 개발자의 창의력을 보여주세요~! //
+
+// Horizon 홈 페이지
+app.get('/home', (req, res) => {
+  res.render('home.html');
 });
