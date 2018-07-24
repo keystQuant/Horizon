@@ -16,11 +16,7 @@ services:
     container_name: horizon-app
     build: .
     ports:
-      - 8080:8080
+      - 7777:7777
     environment:
       - ENVIRONMENT=docker
-    links:
-      - mongo:mongo
-    depends_on:
-      - mongo
     restart: unless-stopped

@@ -15,8 +15,8 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 
-const server = app.listen(8080, () => {
-  console.log('포트 8080에 서버 시작합니다.');
+const server = app.listen(7777, () => {
+  console.log('포트 7777에서 서버 시작합니다.');
 });
 
 const stopServer = () => {

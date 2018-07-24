@@ -3,6 +3,6 @@ RUN npm install -g pm2
 COPY package.json /src/package.json
 RUN cd /src; npm install
 COPY . /src
-EXPOSE 8080
+EXPOSE 7777
 WORKDIR /src
 CMD pm2 start --no-daemon server.js
