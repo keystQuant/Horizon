@@ -24,18 +24,3 @@ services:
     depends_on:
       - mongo
     restart: unless-stopped
-
-  mongo:
-    image: mongo
-    container_name: horizon-mongo
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: horizonadmin
-      MONGO_INITDB_ROOT_PASSWORD: makeitpopwe123HORIZON
-    ports:
-      - 27017:27017
-    volumes:
-      - mongodata:/data/db
-    restart: unless-stopped
-
-volumes:
-  mongodata:

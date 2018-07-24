@@ -1,1 +1,116 @@
+#rancher {
+  background-color: #647bef;
+}
+
+#munin {
+  background-color: #4cbf7b;
+}
+
+#trello {
+  background-color: #4855ba;
+}
+
+#vultr {
+  background-color: #56a0ef;
+}
+
+#github {
+  background-color: #4d5156;
+}
+
+#travis {
+  background-color: #e2d36c;
+}
+
+#sentry {
+  background-color: #c071e8;
+}
+
+#apiary {
+  background-color: #82d6c2;
+}
+
+#django {
+  background-color: #4e8e60;
+}
+
+#analytics {
+  background-color: #e89f3a;
+}
+
+#drive {
+  background-color: #e0c411;
+}
+
+#blog {
+  background-color: #33c448;
+}
+
+
 /* this is a comment */
+.body-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  .body-content > .services {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .services > button {
+      padding: 1rem 3rem;
+      background-color: white;
+      border-radius: 1px;
+      font-family: 'Nanum Gothic', sans-serif;
+      cursor: pointer;
+    }
+
+  .body-content > .outer-services {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .outer-services > .service-sec {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+      .service-btn {
+        width: 33.33%;
+        height: 10rem;
+        color: white;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+
+/*Mobile Styles*/
+@media only screen and (max-width: 900px) {
+
+  .body-content > .outer-services {
+    width: 100%;
+  }
+
+  .outer-services > .service-sec {
+    flex-direction: column;
+  }
+
+  .service-sec > .service-btn {
+    width: 100%;
+  }
+
+}
